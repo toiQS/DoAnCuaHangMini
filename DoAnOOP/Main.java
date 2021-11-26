@@ -14,7 +14,6 @@ public class Main {
         System.out.println("5. Xuat");
         System.out.println("6. Thoat");
         System.out.println();
-        
 
         // nhan su lua chon cua nguoi dung
         Scanner userInput = new Scanner(System.in);
