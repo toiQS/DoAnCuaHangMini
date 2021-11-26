@@ -18,6 +18,7 @@ public class Main {
         // nhan su lua chon cua nguoi dung
         Scanner userInput = new Scanner(System.in);
         int choose = userInput.nextInt();
+        userInput.close();
 
         // ap dun sua lua chon cua nguoi dung
         switch(choose) {
