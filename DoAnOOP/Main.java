@@ -3,6 +3,7 @@ package DoAnOOP;
 import java.util.Scanner;
 
 public class Main {
+    // public String NhapThongTin(String Ten, String Ma, String )
     public static void main(String[] args) {
         
         // // Hien thi lua chon nguoi dung
@@ -45,6 +46,7 @@ public class Main {
         Scanner a = new Scanner(System.in);
         String arrNhanVien[];
         String Ten,Ma = null;
+        // String TiepTuc = null;
         do{
             System.out.println("Ten Nhan Vien: ");
             Ten = a.nextLine();
@@ -60,7 +62,11 @@ public class Main {
             String NgayVaoLam = a.nextLine();
             System.out.println("SDT: ");
             String SDT = a.nextLine();
+            // System.out.println("Tiep tuc?: ");
             Nhanvien nhanvien = new Nhanvien(Ten, Ma, GioiTinh, CCCD, DiaChi, NgayVaoLam, SDT);
+            
+        // }while(!TiepTuc.isEmpty());
         }while(!Ten.isEmpty());
     }
+    
 }
