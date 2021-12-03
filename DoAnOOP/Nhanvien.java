@@ -1,11 +1,11 @@
 package DoAnOOP;
 
 public class Nhanvien extends ThongTin {
-    private String GioiTinh;
-    private String DiaChi;
-    private String SDT;
-    private String NgayVaoLam;
-    private int CCCD;
+    private String GioiTinh; //giới tính
+    private String DiaChi;  // địa chỉ
+    private String SDT; // Số Điện Thoại
+    private String NgayVaoLam;  // ngày vào làm
+    private int CCCD; // căn cước công dân
     public static int ilt = 0; //đếm thứ tự nhân viên
 
     public Nhanvien(String Ten, String Ma, String GioiTinh, int CCCD, String DiaChi, String NgayVaoLam, String SDT){
