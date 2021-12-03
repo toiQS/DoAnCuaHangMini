@@ -1,0 +1,6 @@
+package DoAnOOP;
+
+public class QuayNuoc extends HangHoa{
+    public QuayNuoc(String Ten, String Ma, String NgayNhap, String HSD, int SoLuong, String XuatXu) {
+        super(Ten, Ma, NgayNhap, HSD, SoLuong, XuatXu);
+    }
