@@ -75,6 +75,7 @@ public class TestMain {
 
                              Nhanvien nhanvien = new Nhanvien(Ten, Ma, GioiTinh, CCCD, DiaChi, NgayVaoLam, SDT);
                              NVien.addNhanVien(nhanvien);
+                             break;
                          }
                      }
 
