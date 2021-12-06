@@ -11,7 +11,16 @@ public class QuanLy {
     public void addNhanVien(Nhanvien nhanvien){ //thêm nhân viên
         nhanvienList.add(nhanvien);
     }
-    public void showList(){ //hiện ra thông tin cần thiết( đang sửa chữa)
-        this.nhanvienList.forEach(o -> System.out.println(o.toString()));
+
+    public int delNhanVien(String Ten, String CCCD){
+        for(Nhanvien nhanvien_2 : nhanvienList){
+            if(nhanvien_2.getTen().equals(Ten) && nhanvien_2.getCCCD()==CCCD){
+                nhanvienList.remove(nhanvien_2);
+                return 0;
+            }
+        }
     }
+
+    private List<HangHoa> hangHoaList;// tạo danh sách hàng hóa
+
 }
