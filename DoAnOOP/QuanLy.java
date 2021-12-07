@@ -2,6 +2,7 @@ package DoAnOOP;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class QuanLy {
     private List<Nhanvien> nhanvienList; //tạo danh sách nhân viên
@@ -12,15 +13,25 @@ public class QuanLy {
         nhanvienList.add(nhanvien);
     }
 
-    public int delNhanVien(String Ten, String CCCD){
-        for(Nhanvien nhanvien_2 : nhanvienList){
-            if(nhanvien_2.getTen().equals(Ten) && nhanvien_2.getCCCD()==CCCD){
-                nhanvienList.remove(nhanvien_2);
-                return 0;
-            }
-        }
-    }
+   public boolean delNhanVien(String Ma){ //xóa nhân viên dựa theo mã nhân viên
+      Nhanvien nhanvien = this.nhanvienList.stream().filter(o -> o.getMa().equals(Ma)).findFirst().orElse(null);
+      if(nhanvien == null){
+        return false;
+      }
+      this.nhanvienList.remove(nhanvien);
+      return true;
+   }
 
-    private List<HangHoa> hangHoaList;// tạo danh sách hàng hóa
+   public List<Nhanvien> searchNhanVien(String Ma){ //tìm kiếm dựa theo mã nhân viên
+      return this.nhanvienList.stream().filter(o -> o.getMa().equals(Ma)).collect(Collectors.toList());
+   }
 
+   public void showThongTin(){ //xuất ra toàn bộ thông tin trong danh sách nhân viên
+      this.nhanvienList.forEach(o -> System.out.println(o.toString()));
+   }
+
+   public List<Nhanvien> SuaThongTinNhanVien(int a, Nhanvien nhanvien){
+      nhanvienList.set(a,nhanvien);
+      return nhanvienList;
+   }
 }
