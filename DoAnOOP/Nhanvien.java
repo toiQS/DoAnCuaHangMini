@@ -55,7 +55,7 @@ public class Nhanvien extends ThongTin {
     @Override
     public String toString(){
         return ilt+".Họ Tên: " + Ten + "/" + "Mã số nhân viên: "+Ma+"/Giới Tính: "+ GioiTinh+"/CCCD: "+CCCD+"/Địa Chỉ: "+ DiaChi+"/Ngày Vào Làm: "+NgayVaoLam+
-                "SDT: "+ SDT;
+                "/SDT: "+ SDT;
     }
 
 }
